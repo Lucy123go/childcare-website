@@ -22,7 +22,7 @@ mark{background:linear-gradient(transparent 55%,rgba(233,180,76,.55) 55%);color:
 /* 版面 */
 .top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(251,246,234,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .brand{font-family:"Noto Serif TC",serif;font-weight:800;color:var(--clover-d);text-decoration:none}
-.brand small{font:12px "Noto Sans TC";color:var(--muted);margin-left:4px}
+.brand small{display:block;font:11px/1.2 "Noto Sans TC";color:var(--muted);font-weight:400}
 .level{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:92px 16px 40px}
 .paper{width:100%;max-width:720px;background:rgba(255,250,240,.93);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;box-shadow:0 18px 40px rgba(60,80,50,.18)}
 .chip{display:inline-block;margin:0 0 6px;padding:2px 12px;border:1px dashed var(--clover);border-radius:99px;color:var(--clover-d);font-size:13px;font-weight:700;letter-spacing:.04em}
