@@ -181,3 +181,4 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .story{margin-top:20px}
 .story h4{margin:1.4em 0 .3em;font-family:"Noto Serif TC",serif;font-size:18px;color:var(--clover-d)}
 .story p{margin:.5em 0}
+.story blockquote{margin:.6em 0;padding:.6em 1em;border-left:3px solid var(--honey);background:var(--cream);border-radius:0 10px 10px 0}
