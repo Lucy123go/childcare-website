@@ -170,3 +170,5 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .cta-actions .btn.big{margin:0}
 .btn.line{background:#06c755;border-color:#06c755;color:#fff}
 .qr{display:block;width:140px;height:140px;margin:14px auto 0;border-radius:12px;background:#fff;padding:6px}
+.shots.three{grid-template-columns:repeat(3,1fr)}
+.shots.three img{object-position:50% 40%}
