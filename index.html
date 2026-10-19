@@ -3,165 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>準公共保母｜溫馨托育</title>
-<meta name="description" content="準公共托育保母個人官網：獲獎經歷、收費試算、日常活動、飲食與托育歷程。">
+<title>森林小旅行｜準公共托育</title>
+<meta name="description" content="獲獎準公共保母的森林系托育：故事、音樂、律動與安心飲食，每月實付 4,000 元起。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="#top">🌱 我的托育<span>（暫定名稱）</span></a>
-  <nav>
-    <a href="#awards">獲獎</a>
-    <a href="#pricing">收費試算</a>
-    <a href="#activities">活動</a>
-    <a href="#meals">飲食</a>
-    <a href="#journey">歷程</a>
-    <a href="#podcast">Podcast</a>
-    <a href="#contact" class="cta">聯絡我</a>
-  </nav>
+<!-- 動態背景：天空漸層、太陽光暈、三層森林、飄落葉子與螢火蟲 -->
+<div class="bg" aria-hidden="true">
+  <div class="sky"></div>
+  <div class="glow" id="glow"></div>
+  <svg class="trees t1" id="t1" preserveAspectRatio="none"></svg>
+  <svg class="trees t2" id="t2" preserveAspectRatio="none"></svg>
+  <svg class="trees t3" id="t3" preserveAspectRatio="none"></svg>
+  <canvas id="fx"></canvas>
+</div>
+
+<header class="top">
+  <a class="brand" href="#l1"><span class="clover">🍀</span> 森林小旅行<small>（暫定名稱）</small></a>
+  <a class="btn mini" href="#l10">預約參觀</a>
 </header>
 
-<main id="top">
+<button class="pp-btn" id="ppBtn" aria-expanded="false" aria-controls="ppPanel">
+  <span>🎫</span><b id="ppCount">0/10</b>
+</button>
+<aside class="pp-panel" id="ppPanel" hidden>
+  <div class="pp-head"><h3>森林通行證</h3><button id="ppClose" aria-label="關閉">✕</button></div>
+  <p class="pp-note">往下捲動，走過每一關就能蓋章。</p>
+  <div class="stamps" id="stamps"></div>
+</aside>
 
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">準公共托育・個人保母</p>
-    <h1>用故事、音樂與律動，<br>陪孩子溫柔長大</h1>
-    <p class="lead">2025 年 4 月取得登記證，從第一位寶寶開始，一步一步累積專業與信任。</p>
-    <div class="hero-actions">
-      <a class="btn" href="#pricing">試算每月費用</a>
-      <a class="btn ghost" href="#journey">看我的托育歷程</a>
+<main>
+
+<!-- LV1 入口 -->
+<section class="level" id="l1" data-stamp="🌲|森林入口">
+  <div class="paper hero">
+    <p class="chip">森林托育・準公共保母 ｜ 第 1 關・入口</p>
+    <h1>讓寶寶在故事、音樂與律動裡，度過安心的每一天</h1>
+    <p class="lead">你上班的時候，我陪孩子聽故事、唱歌、跳舞、曬太陽。<br>領滿政府補助後，<mark>每月實付只要 NT$4,000 起</mark>。</p>
+    <div class="actions">
+      <a class="btn" href="#l6">試算我家每月費用 ↓</a>
+      <a class="btn ghost" href="#l3">先看三枚獎項</a>
     </div>
-    <ul class="badges">
-      <li>🏅 優質托育人員選拔・潛力新秀獎</li>
-      <li>📖 好會說故事獎</li>
-      <li>🎶 律動動感寶貝獎</li>
-    </ul>
-  </div>
-</section>
-
-<section id="about" class="wrap">
-  <h2>關於我</h2>
-  <div class="two">
-    <div class="photo ph">照片位置<br><small>（之後換成你的照片）</small></div>
-    <div>
-      <p>【在這裡放你的自我介紹：為什麼投入托育、你的托育理念、家裡環境特色。】</p>
-      <p>【可以補充：證照、研習、照顧年齡範圍、收托人數。】</p>
+    <div class="ticket-mini">
+      <span>入園券 NO.001</span>
+      <span>2025.04 取得托育登記證</span>
     </div>
   </div>
 </section>
 
-<section id="awards" class="alt">
-  <div class="wrap">
-    <h2>獲獎肯定</h2>
-    <p class="sub">三個獎項，是對我日常用心的最好鼓勵。</p>
-    <div class="cards three">
-      <article class="card"><div class="icon">🏅</div><h3>優質托育人員選拔<br>潛力新秀獎</h3><p>【頒獎單位、年份、評選過程與得獎感言】</p></article>
-      <article class="card"><div class="icon">📖</div><h3>好會說故事獎</h3><p>【頒獎單位、年份、你說故事的特色（如：搭配手偶、聲音表情）】</p></article>
-      <article class="card"><div class="icon">🎶</div><h3>律動動感寶貝獎</h3><p>【頒獎單位、年份、帶幼兒律動的方式與歌曲】</p></article>
+<!-- LV2 關於我 -->
+<section class="level" id="l2" data-stamp="🧚|認識我">
+  <div class="paper reveal">
+    <p class="chip">第 2 關・認識森林裡的我</p>
+    <h2>把孩子交給一個，你放心的人</h2>
+    <div class="about">
+      <div class="ph photo">照片位置<br><small>（之後換成你的照片）</small></div>
+      <div>
+        <p>【用「你」開頭說話：例如「你擔心的是孩子在外面有沒有被好好照顧，我想讓你知道……」】</p>
+        <p>【托育理念、家裡環境特色、收托年齡與人數。】</p>
+        <ul class="gets">
+          <li>🌿 一對少數的穩定陪伴【可修改】</li>
+          <li>📖 每天都有故事與歌聲【可修改】</li>
+          <li>🏅 三項獲獎肯定的專業</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="pricing" class="wrap">
-  <h2>收費與補助試算</h2>
-  <p class="sub">價格依政府對準公共保母的規範定價。</p>
-
-  <div class="cards two">
-    <article class="card price">
-      <h3>日托</h3><p class="muted">每日 10 小時以內</p>
-      <p class="big">NT$ 19,000<small> / 月</small></p>
-    </article>
-    <article class="card price">
-      <h3>全日托</h3><p class="muted">超過 10 小時之全日照顧</p>
-      <p class="big">NT$ 27,600<small> / 月</small></p>
-    </article>
-  </div>
-
-  <div class="calc" id="calc">
-    <h3>🧮 費用試算</h3>
-    <div class="seg" role="radiogroup" aria-label="托育方案">
-      <button type="button" data-plan="19000" class="on" role="radio" aria-checked="true">日托 19,000</button>
-      <button type="button" data-plan="27600" role="radio" aria-checked="false">全日托 27,600</button>
-    </div>
-
-    <label class="row"><span>每月政府補助（托育補助＋準公共合作聯盟補助）</span>
-      <output id="subOut">15,000</output>
-    </label>
-    <input type="range" id="sub" min="0" max="15000" step="500" value="15000" aria-label="每月補助金額">
-    <p class="hint">拉到 0 可看「完全沒有補助」的情況；實際補助依家長資格而定。</p>
-
-    <label class="row"><span>預計托育月數</span><output id="monOut">12 個月</output></label>
-    <input type="range" id="mon" min="1" max="36" step="1" value="12" aria-label="托育月數">
-
-    <div class="result">
-      <div><span>每月實付</span><strong id="rMonth">NT$ 4,000</strong></div>
-      <div><span>期間實付總額</span><strong id="rTotal">NT$ 48,000</strong></div>
-      <div><span>期間補助總額</span><strong id="rSaved">NT$ 180,000</strong></div>
-    </div>
-    <p class="hint">日托＋全額補助 15,000 ＝ 實付 4,000；全日托＋全額補助 ＝ 實付 12,600。試算僅供參考，以實際簽約為準。</p>
-  </div>
-</section>
-
-<section id="activities" class="alt">
-  <div class="wrap">
-    <h2>日常活動</h2>
-    <p class="sub">動靜交替，讓孩子在玩中學習。</p>
-    <div class="cards four">
-      <article class="card"><div class="icon">🎵</div><h3>音樂活動</h3><p>【兒歌、樂器、節奏遊戲…】</p></article>
-      <article class="card"><div class="icon">📚</div><h3>閱讀活動</h3><p>【繪本共讀、說故事時間…】</p></article>
-      <article class="card"><div class="icon">🌳</div><h3>戶外活動</h3><p>【公園散步、曬太陽、接觸自然…】</p></article>
-      <article class="card"><div class="icon">🤸</div><h3>體能活動</h3><p>【爬行、律動、大肌肉遊戲…】</p></article>
-    </div>
-    <div class="gallery">
-      <div class="ph">活動照片 1</div><div class="ph">活動照片 2</div><div class="ph">活動照片 3</div>
+<!-- LV3 獎項 -->
+<section class="level" id="l3" data-stamp="🏅|三枚徽章">
+  <div class="paper reveal">
+    <p class="chip">第 3 關・三枚徽章</p>
+    <h2>為什麼可以安心？因為這三件事被看見了</h2>
+    <div class="badge-list">
+      <article class="badge-card"><div class="medal">🏅</div><div>
+        <h3>優質托育人員選拔・潛力新秀獎</h3>
+        <p class="gain">你得到：被專業評選肯定的照顧品質</p>
+        <p>【頒獎單位、年份、得獎感言】</p></div></article>
+      <article class="badge-card"><div class="medal">📖</div><div>
+        <h3>好會說故事獎</h3>
+        <p class="gain">你得到：孩子每天都有豐富的語言刺激</p>
+        <p>【頒獎單位、年份、你說故事的特色】</p></div></article>
+      <article class="badge-card"><div class="medal">🎶</div><div>
+        <h3>律動動感寶貝獎</h3>
+        <p class="gain">你得到：玩得開心、動得健康的孩子</p>
+        <p>【頒獎單位、年份、帶律動的方式與歌曲】</p></div></article>
     </div>
   </div>
 </section>
 
-<section id="meals" class="wrap">
-  <h2>飲食照顧</h2>
-  <p class="sub">依寶寶月齡與家長需求，循序漸進。</p>
-  <div class="cards two">
-    <article class="card"><div class="icon">🍼</div><h3>喝奶階段</h3><p>【母乳／配方奶的接收與保存方式、餵奶流程與記錄、拍嗝照顧…】</p></article>
-    <article class="card"><div class="icon">🥣</div><h3>副食品階段</h3><p>【副食品添加原則、食材選擇、每日菜單範例、過敏觀察…】</p></article>
+<!-- LV4 活動 -->
+<section class="level" id="l4" data-stamp="🎵|森林日常">
+  <div class="paper reveal">
+    <p class="chip">第 4 關・森林日常</p>
+    <h2>孩子的一天，會玩到這些</h2>
+    <div class="grid2">
+      <article class="tile"><div class="ico">🎵</div><h3>音樂活動</h3><p class="gain">孩子得到：節奏感與愛唱歌的快樂</p><p>【兒歌、樂器、節奏遊戲】</p></article>
+      <article class="tile"><div class="ico">📚</div><h3>閱讀活動</h3><p class="gain">孩子得到：愛上書與故事</p><p>【繪本共讀、說故事時間】</p></article>
+      <article class="tile"><div class="ico">🌳</div><h3>戶外活動</h3><p class="gain">孩子得到：陽光、空氣與好奇心</p><p>【公園散步、接觸自然】</p></article>
+      <article class="tile"><div class="ico">🤸</div><h3>體能活動</h3><p class="gain">孩子得到：更靈活強壯的身體</p><p>【爬行、律動、大肌肉遊戲】</p></article>
+    </div>
+    <div class="gallery"><div class="ph">活動照片 1</div><div class="ph">活動照片 2</div><div class="ph">活動照片 3</div></div>
   </div>
 </section>
 
-<section id="journey" class="alt">
-  <div class="wrap">
-    <h2>我的托育歷程</h2>
-    <p class="sub">從取得登記證到現在，一路走來的足跡。</p>
-    <ol class="timeline">
-      <li><time>2025 年 4 月</time><h3>取得托育人員登記證</h3><p>正式踏上托育之路。</p></li>
-      <li><time>【年月】</time><h3>迎接第一位寶寶</h3><p>【第一個孩子入托的故事與心得】</p></li>
-      <li><time>【年月】</time><h3>獲得獎項肯定</h3><p>【潛力新秀獎／好會說故事獎／律動動感寶貝獎 的時間點】</p></li>
-      <li class="now"><time>現在</time><h3>照顧第二位寶寶</h3><p>【目前的狀況與想分享的事】</p></li>
+<!-- LV5 飲食 -->
+<section class="level" id="l5" data-stamp="🍯|蜂蜜餐桌">
+  <div class="paper reveal">
+    <p class="chip">第 5 關・蜂蜜餐桌</p>
+    <h2>吃得好，是你最在意的事，也是我的</h2>
+    <div class="grid2">
+      <article class="tile"><div class="ico">🍼</div><h3>喝奶階段</h3><p class="gain">你得到：照你的習慣餵，不用擔心</p><p>【母乳／配方奶的接收與保存、餵奶流程、拍嗝照顧、記錄方式】</p></article>
+      <article class="tile"><div class="ico">🥣</div><h3>副食品階段</h3><p class="gain">你得到：循序漸進、對應月齡的菜單</p><p>【添加原則、食材選擇、每日菜單範例、過敏觀察】</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- LV6 車票與試算 -->
+<section class="level" id="l6" data-stamp="🎫|森林車票">
+  <div class="paper reveal">
+    <p class="chip">第 6 關・森林車票</p>
+    <h2>政府補助之後，你每個月只付這些</h2>
+    <p class="muted">定價為政府對準公共保母的規範價格，再加上托育補助與準公共合作聯盟補助，家長每月可領 NT$15,000。</p>
+
+    <div class="tickets">
+      <article class="ticket">
+        <div class="tk-main"><span class="tag">日托票</span><h3>10 小時以內</h3><p class="muted">定價 NT$19,000 / 月</p></div>
+        <div class="tk-stub"><small>補助後實付</small><b>4,000</b><small>元 / 月</small></div>
+      </article>
+      <article class="ticket gold">
+        <div class="tk-main"><span class="tag">全日托票</span><h3>全日照顧</h3><p class="muted">定價 NT$27,600 / 月</p></div>
+        <div class="tk-stub"><small>補助後實付</small><b>12,600</b><small>元 / 月</small></div>
+      </article>
+    </div>
+
+    <div class="calc" id="calc">
+      <h3>🧮 算算看，我家一年省多少</h3>
+      <div class="seg" role="radiogroup" aria-label="托育方案">
+        <button type="button" data-plan="19000" class="on" role="radio" aria-checked="true">日托 19,000</button>
+        <button type="button" data-plan="27600" role="radio" aria-checked="false">全日托 27,600</button>
+      </div>
+      <label class="row"><span>每月政府補助</span><output id="subOut">15,000</output></label>
+      <input type="range" id="sub" min="0" max="15000" step="500" value="15000" aria-label="每月補助金額">
+      <p class="hint">實際補助依家長資格而定；拉到 0 就是完全沒有補助。</p>
+      <label class="row"><span>預計托育月數</span><output id="monOut">12 個月</output></label>
+      <input type="range" id="mon" min="1" max="36" step="1" value="12" aria-label="托育月數">
+
+      <div class="bars">
+        <div class="bar"><span>定價</span><i><u id="barFull"></u></i><em id="barFullT"></em></div>
+        <div class="bar"><span>你實付</span><i><u id="barPay" class="pay"></u></i><em id="barPayT"></em></div>
+      </div>
+      <div class="result">
+        <div><span>每月實付</span><strong id="rMonth"></strong></div>
+        <div><span>期間實付總額</span><strong id="rTotal"></strong></div>
+        <div><span>期間省下</span><strong id="rSaved"></strong></div>
+      </div>
+      <p class="hint">試算僅供參考，以實際簽約為準。</p>
+    </div>
+  </div>
+</section>
+
+<!-- LV7 歷程 -->
+<section class="level" id="l7" data-stamp="🗺️|足跡地圖">
+  <div class="paper reveal">
+    <p class="chip">第 7 關・足跡地圖</p>
+    <h2>我是怎麼一路走到現在的</h2>
+    <ol class="timeline" id="timeline">
+      <li><time>2025 年 4 月</time><h3>取得托育人員登記證</h3><p>正式開始托育，迎接第一段旅程。</p></li>
+      <li><time>【年月】</time><h3>第一位寶寶入托</h3><p>【第一個孩子的故事與心得】</p></li>
+      <li><time>【年月】</time><h3>獲得三項獎項肯定</h3><p>【潛力新秀獎／好會說故事獎／律動動感寶貝獎】</p></li>
+      <li class="now"><time>現在</time><h3>陪伴第二位寶寶</h3><p>【目前的狀況與名額】</p></li>
     </ol>
   </div>
 </section>
 
-<section id="podcast" class="wrap">
-  <h2>媒體與 Podcast 受訪</h2>
-  <p class="sub">聽我分享托育的日常與想法。</p>
-  <div class="cards two">
-    <article class="card pod"><div class="icon">🎙️</div><h3>【節目名稱 / 集數標題】</h3><p>【簡介】</p><a class="btn small" href="#">收聽（放連結）</a></article>
-    <article class="card pod"><div class="icon">🎙️</div><h3>【節目名稱 / 集數標題】</h3><p>【簡介】</p><a class="btn small" href="#">收聽（放連結）</a></article>
+<!-- LV8 Podcast -->
+<section class="level" id="l8" data-stamp="🎙️|森林廣播">
+  <div class="paper reveal">
+    <p class="chip">第 8 關・森林廣播</p>
+    <h2>想先聽聽我怎麼說？</h2>
+    <div class="grid2">
+      <article class="tile"><div class="ico">🎙️</div><h3>【節目名稱 / 集數標題】</h3><p>【簡介】</p><a class="btn mini" href="#">收聽（放連結）</a></article>
+      <article class="tile"><div class="ico">🎙️</div><h3>【節目名稱 / 集數標題】</h3><p>【簡介】</p><a class="btn mini" href="#">收聽（放連結）</a></article>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="alt">
-  <div class="wrap center">
-    <h2>預約參觀・聯絡我</h2>
-    <p>歡迎來訊了解名額與托育環境。</p>
-    <p>LINE：【ID】　電話：【號碼】　地區：【縣市區】</p>
+<!-- LV9 FAQ -->
+<section class="level" id="l9" data-stamp="🍀|常見問題">
+  <div class="paper reveal">
+    <p class="chip">第 9 關・常見問題</p>
+    <h2>你可能想問</h2>
+    <div class="faq">
+      <details><summary>補助要怎麼領？每個月真的是 15,000 嗎？</summary><p>托育補助加上準公共合作聯盟補助，家長每月可領 NT$15,000，依資格而定。日托實付約 4,000、全日托實付約 12,600。【可補充申請流程】</p></details>
+      <details><summary>日托和全日托差在哪裡？</summary><p>日托為每日 10 小時以內，定價 19,000；全日托定價 27,600。【可補充實際接送時段】</p></details>
+      <details><summary>可以先參觀環境嗎？</summary><p>【說明預約參觀方式與時間】</p></details>
+      <details><summary>收托幾個孩子？目前還有名額嗎？</summary><p>【收托人數與目前名額】</p></details>
+      <details><summary>孩子生病或請假怎麼辦？</summary><p>【請假與生病處理規則】</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- LV10 CTA -->
+<section class="level" id="l10" data-stamp="💌|出發">
+  <div class="paper reveal cta">
+    <p class="chip">第 10 關・出發</p>
+    <h2>一邊想著「我的孩子會過得好嗎」，<br>一邊來聊聊吧</h2>
+    <article class="ticket gold big">
+      <div class="tk-main"><span class="tag">預約參觀</span><h3>先來看看森林裡的一天</h3><p class="muted">LINE：【ID】　電話：【號碼】<br>地區：【縣市區】</p></div>
+      <div class="tk-stub"><small>實付</small><b>4,000</b><small>元 / 月起</small></div>
+    </article>
+    <a class="btn big" href="#">LINE 預約參觀 →</a>
+    <p class="hint">日托、領滿政府補助後的每月實付金額。</p>
   </div>
 </section>
 
 </main>
-
-<footer><p>© 2026 我的托育・All rights reserved.</p></footer>
+<footer><p>© 2026 森林小旅行・All rights reserved.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
