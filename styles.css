@@ -190,3 +190,4 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .reasons li{margin:1em 0}
 .reasons li>b{display:block;font-family:"Noto Serif TC",serif;color:var(--clover-d);margin-bottom:.2em}
 .reasons li p{margin:.2em 0}
+.reasons li .subt{display:block;font-size:14px;color:var(--muted);margin-bottom:.3em}
