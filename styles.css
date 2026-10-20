@@ -196,3 +196,8 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .reco{margin:16px 0 0;padding:12px 16px;background:var(--cream);border-left:3px solid var(--honey);border-radius:0 10px 10px 0}
 .hint.center a{color:var(--clover-d)}
+.promo{margin-top:12px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--honey);border-radius:0 10px 10px 0}
+.promo p{margin:.3em 0}
+.promo .links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700}
+.promo .links a{color:var(--clover-d)}
+.pod-img{display:block;width:100%;height:auto;border-radius:12px;border:3px solid #fff;box-shadow:0 4px 10px rgba(60,80,50,.2);margin-bottom:8px}
