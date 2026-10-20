@@ -201,3 +201,14 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .promo .links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700}
 .promo .links a{color:var(--clover-d)}
 .pod-img{display:block;width:100%;height:auto;border-radius:12px;border:3px solid #fff;box-shadow:0 4px 10px rgba(60,80,50,.2);margin-bottom:8px}
+.rec-h{margin:1.6em 0 .2em;font-size:20px;color:var(--clover-d)}
+.recs{display:grid;gap:14px;margin-top:12px}
+.rec{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.rec>img{flex:none;width:96px;height:96px;object-fit:cover;border-radius:12px;border:3px solid #fff;box-shadow:0 4px 10px rgba(60,80,50,.2)}
+.rec>div{min-width:0}
+.rec h4{margin:0;font-family:"Noto Serif TC",serif;font-size:17px;line-height:1.4}
+.rec .by{margin:0 0 .3em;color:var(--muted);font-size:13px}
+.rec p{margin:.3em 0}
+.rec .why{padding:6px 10px;background:var(--paper);border-radius:8px;font-size:14px}
+.rec .links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700;font-size:14px}
+.rec .links a{color:var(--clover-d)}
