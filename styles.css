@@ -185,3 +185,8 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .mid-cta{margin-top:20px;padding:16px;border:2px dashed var(--honey-d);border-radius:var(--r);text-align:center}
 .mid-cta p{margin:0 0 4px}
 .mid-cta .btn.big{font-size:16px;padding:10px}
+.lead-q{font:700 18px/1.7 "Noto Serif TC",serif;color:var(--clover-d)}
+.reasons{margin:.6em 0;padding-left:1.4em}
+.reasons li{margin:1em 0}
+.reasons li>b{display:block;font-family:"Noto Serif TC",serif;color:var(--clover-d);margin-bottom:.2em}
+.reasons li p{margin:.2em 0}
