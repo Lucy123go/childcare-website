@@ -212,3 +212,6 @@ footer{text-align:center;padding:24px;color:#fff;font-size:13px;text-shadow:0 1p
 .rec .why{padding:6px 10px;background:var(--paper);border-radius:8px;font-size:14px}
 .rec .links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700;font-size:14px}
 .rec .links a{color:var(--clover-d)}
+.shots.toys figure{min-width:0}
+.shots.toys img{object-position:50% 50%}
+@media (max-width:640px){.shots.toys{grid-template-columns:repeat(2,1fr)}}
