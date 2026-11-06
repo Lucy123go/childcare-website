@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lucy123go.github.io/childcare-website/sitemap.xml
